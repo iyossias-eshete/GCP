@@ -1,3 +1,4 @@
+#!/bin/bash
 gcloud compute instances create "my-vm-1" --zone=us-central1-a --machine-type "n1-standard-1" --image-project "debian-cloud" --image "debian-9-stretch-v20190213" --subnet "default"
 
 gcloud compute  firewall-rules create default-allow-http --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0
